@@ -1,23 +1,103 @@
 .about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8rem;
     background-color: #EAE4D5;
-    padding: 5rem 9% 5rem 0;
+    padding: 100px 15px;
     position: relative;
-    padding-top: 29.2rem;
+    padding-top: 15rem;
 }
 
-.about h2 {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #333;
+.about h2{
+    margin-bottom:5rem;
 }
 
-.about p {
-    font-size: 1.6rem;
-    line-height: 1.6;
-    color: #333;
+.heading{
+    font-size: 4em;
+    text-align: center;
+    color: #948979;
+    margin: 5rem 0;
+}
+
+.timeline-items{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.timeline-items::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: #948979;
+    left: calc(50% - 1px)
+}
+
+.timeline-item{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.timeline-item:last-child{
+    margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+
+.timeline-dot{
+    height: 21px;
+    width: 21px;
+    background-color:#948979;
+    box-shadow: 0 0 25px #948979,
+                0 0 50px #948979;
+    position: absolute;
+    left: calc(50% - 9px);
+    border-radius: 50%;
+    top: 10px;
+
+}
+
+.timeline-date{
+    font-size: 20px;
+    font-weight: 800;
+    color: #3c3c3c;
+    margin: 6px 0 15px;
+}
+
+.timeline-content{
+    background-color: #c9baa5;
+    border: 3px solid #948979;
+    padding: 30px 50px;
+    border-radius: 4rem;
+    box-shadow: 0 0 10px #000;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color: #3c3c3c;
+}
+
+.timeline-content:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #000;
+}
+
+.timeline-content h3{
+    font-size: 20px;
+    color: #3c3c3c;
+    margin: 0 0 10px;
+    font-weight: 500;
+}
+
+.timeline-content p{
+    color: #3c3c3c;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
 }
