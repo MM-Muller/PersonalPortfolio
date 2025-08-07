@@ -7,24 +7,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/skills.css">
+    <link rel="stylesheet" href="/css/projects.css">
+    <link rel="stylesheet" href="/css/contact.css">
     <title>Portifolio</title>
 </head>
 
 <body>
     <header>
-        <a href="#" class="logo">Müller</a>
+        <a href="#" class="logo">MMM</a>
 
         <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#">About</a>
-            <a href="#">Skills</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <main>
-        <section class="home">
+        <section class="home" id="home">
             <div class="home-img">
                 <img src="/img/photo.jpeg" alt="">
             </div>
@@ -37,19 +40,80 @@
                     <a href="#"><i class="fab fa-github"></i></a>
                     <a href="mailto:seuemail@exemplo.com"><i class="fas fa-envelope"></i></a>
                 </div>
-                <a href="#" class="btn">Hire Me</a>
-            </div>
+                <a href="#" class="btn">Contact Me</a>
+
         </section>
 
-        <section class="about">
+        <section class="about" id="about">
             <div class="custom-shape-divider-top-1754576131">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                     preserveAspectRatio="none">
                     <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
                 </svg>
-
             </div>
-            <h2>About Me</h2>
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+            </div>
+
+        </section>
+
+        <section class="skills" id="skills">
+            <div class="custom-shape-divider-top-1754576132">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <div class="skills-content">
+                <h2>Skills</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+                <ul class="skills-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                </ul>
+
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="custom-shape-divider-top-1754576131">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <div class="projects-content">
+                <h2>Projects</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+                <div class="project-list">
+                    <div class="project-item">
+                        <h3>Project 1</h3>
+                        <p>Description of project 1.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 2</h3>
+                        <p>Description of project 2.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 3</h3>
+                        <p>Description of project 3.</p>
+                    </div>
+                </div>
+
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="contact-content">
+                <h2>Contact</h2>
+                <p>If you would like to get in touch, feel free to reach out!</p>
             </div>
         </section>
     </main>
