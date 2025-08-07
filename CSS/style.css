@@ -205,56 +205,398 @@ span {
 }
 
 .typing-text span::before {
-    content: "Software Engineer";
+    content: "";
     color: #948979;
-    animation: words 20s infinite;
+    animation: typing 12s infinite;
 }
 
 .typing-text span::after {
     content: "";
     background-color: #000;
     position: absolute;
-    width: calc(100% + 8px);
+    width: 3px;
     height: 100%;
-    border-left: 3px solid #000;
-    right: -8;
+    border-left: 3px solid #EAE4D5;
+    right: -8px;
     animation: cursor 0.8s infinite;
 }
 
 @keyframes cursor {
-    to {
-        border-left: 3px solid #EAE4D5;
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
     }
 }
 
-@keyframes words {
 
-    0%,
-    20% {
+@keyframes typing {
+
+    0% {
+        content: "";
+    }
+
+    1% {
+        content: "S";
+    }
+
+    2% {
+        content: "So";
+    }
+
+    3% {
+        content: "Sof";
+    }
+
+    4% {
+        content: "Soft";
+    }
+
+    5% {
+        content: "Softw";
+    }
+
+    6% {
+        content: "Softwa";
+    }
+
+    7% {
+        content: "Softwar";
+    }
+
+    8% {
+        content: "Software";
+    }
+
+    9% {
+        content: "Software ";
+    }
+
+    10% {
+        content: "Software E";
+    }
+
+    11% {
+        content: "Software En";
+    }
+
+    12% {
+        content: "Software Eng";
+    }
+
+    13% {
+        content: "Software Engi";
+    }
+
+    14% {
+        content: "Software Engin";
+    }
+
+    15% {
+        content: "Software Engine";
+    }
+
+    16% {
+        content: "Software Enginee";
+    }
+
+    17% {
         content: "Software Engineer";
     }
 
-    21%,
+    18%,
+    22% {
+        content: "Software Engineer";
+    }
+
+    23% {
+        content: "Software Enginee";
+    }
+
+    24% {
+        content: "Software Engine";
+    }
+
+    25% {
+        content: "Software Engin";
+    }
+
+    26% {
+        content: "Software Engi";
+    }
+
+    27% {
+        content: "Software Eng";
+    }
+
+    28% {
+        content: "Software En";
+    }
+
+    29% {
+        content: "Software E";
+    }
+
+    30% {
+        content: "Software ";
+    }
+
+    31% {
+        content: "Software";
+    }
+
+    32% {
+        content: "Softwar";
+    }
+
+    33% {
+        content: "Softwa";
+    }
+
+    34% {
+        content: "Softw";
+    }
+
+    35% {
+        content: "Soft";
+    }
+
+    36% {
+        content: "Sof";
+    }
+
+    37% {
+        content: "So";
+    }
+
+    38% {
+        content: "S";
+    }
+
+    39% {
+        content: "";
+    }
+
     40% {
+        content: "T";
+    }
+
+    41% {
+        content: "Te";
+    }
+
+    42% {
+        content: "Tec";
+    }
+
+    43% {
+        content: "Tech";
+    }
+
+    44% {
+        content: "Tech ";
+    }
+
+    45% {
+        content: "Tech E";
+    }
+
+    46% {
+        content: "Tech En";
+    }
+
+    47% {
+        content: "Tech Ent";
+    }
+
+    48% {
+        content: "Tech Enth";
+    }
+
+    49% {
+        content: "Tech Enthu";
+    }
+
+    50% {
+        content: "Tech Enthus";
+    }
+
+    51% {
+        content: "Tech Enthusi";
+    }
+
+    52% {
+        content: "Tech Enthusia";
+    }
+
+    53% {
+        content: "Tech Enthusias";
+    }
+
+    54% {
         content: "Tech Enthusiast";
     }
 
-    41%,
+    55%,
+    59% {
+        content: "Tech Enthusiast";
+    }
+
     60% {
+        content: "Tech Enthusias";
+    }
+
+    61% {
+        content: "Tech Enthusia";
+    }
+
+    62% {
+        content: "Tech Enthusi";
+    }
+
+    63% {
+        content: "Tech Enthus";
+    }
+
+    64% {
+        content: "Tech Enthu";
+    }
+
+    65% {
+        content: "Tech Enth";
+    }
+
+    66% {
+        content: "Tech Ent";
+    }
+
+    67% {
+        content: "Tech En";
+    }
+
+    68% {
+        content: "Tech E";
+    }
+
+    69% {
+        content: "Tech ";
+    }
+
+    70% {
+        content: "Tech";
+    }
+
+    71% {
+        content: "Tec";
+    }
+
+    72% {
+        content: "Te";
+    }
+
+    73% {
+        content: "T";
+    }
+
+    74% {
+        content: "";
+    }
+
+    75% {
+        content: "A";
+    }
+
+    76% {
+        content: "AI";
+    }
+
+    77% {
+        content: "AI ";
+    }
+
+    78% {
+        content: "AI E";
+    }
+
+    79% {
+        content: "AI En";
+    }
+
+    80% {
+        content: "AI Eng";
+    }
+
+    81% {
+        content: "AI Engi";
+    }
+
+    82% {
+        content: "AI Engin";
+    }
+
+    83% {
+        content: "AI Engine";
+    }
+
+    84% {
+        content: "AI Enginee";
+    }
+
+    85% {
         content: "AI Engineer";
     }
 
-    61%,
-    80% {
-        content: "AI Enthusiast";
+    86%,
+    90% {
+        content: "AI Engineer";
+    }
+
+    91% {
+        content: "AI Enginee";
+    }
+
+    92% {
+        content: "AI Engine";
+    }
+
+    93% {
+        content: "AI Engin";
+    }
+
+    94% {
+        content: "AI Engi";
+    }
+
+    95% {
+        content: "AI Eng";
+    }
+
+    96% {
+        content: "AI En";
+    }
+
+    97% {
+        content: "AI E";
+    }
+
+    98% {
+        content: "AI ";
+    }
+
+    99% {
+        content: "AI";
     }
 
     100% {
-        content: "Software Engineer";
+        content: "A";
     }
 }
 
-/* CSS do divisor personalizado */
 .custom-shape-divider-top-1754576131 {
     position: absolute;
     top: 0;
