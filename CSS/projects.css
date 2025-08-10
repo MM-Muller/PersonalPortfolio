@@ -144,7 +144,6 @@
     background: gray;
 }
 
-/* MEDIA QUERIES RESPONSIVAS PARA PROJETOS */
 @media (max-width: 1200px) {
     .projects-container {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
