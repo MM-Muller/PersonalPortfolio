@@ -241,7 +241,7 @@
     .carousel-container {
         height: 240px;
         margin: 0 4rem;
-        overflow: visible;
+        overflow: hidden;
     }
 
     .skill-card {
@@ -284,7 +284,7 @@
         height: 200px;
         padding: 1rem;
         margin: 0 5rem;
-        overflow: visible;
+        overflow: hidden;
     }
 
     .skill-card {
@@ -345,7 +345,7 @@
 
     .carousel-container {
         margin: 0 6rem;
-        overflow: visible;
+        overflow: hidden;
     }
 
     .carousel-btn.prev {
@@ -360,20 +360,20 @@
 @media (min-width: 1025px) {
     .carousel-container {
         max-width: none;
-        overflow: visible;
+        overflow: hidden;
     }
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
     .carousel-container {
         max-width: 420px;
-        overflow: visible;
+        overflow: hidden;
     }
 }
 
 @media (max-width: 768px) {
     .carousel-container {
         max-width: 280px;
-        overflow: visible;
+        overflow: hidden;
     }
 }
