@@ -30,7 +30,7 @@ class SkillsCarousel {
     }
 
     getCardsToShow() {
-        const containerWidth = this.container.offsetWidth - 40; // Subtraindo padding
+        const containerWidth = this.container.offsetWidth - 40;
         if (window.innerWidth <= 768) {
             return Math.min(2, this.cards.length);
         } else if (window.innerWidth <= 1024) {
@@ -175,16 +175,16 @@ function initializeCarousels() {
 
         if (hardSkillsTrack && hardSkillsTrack.children.length > 0) {
             hardSkillsCarousel = new SkillsCarousel('hardSkills');
-            console.log('✅ Hard Skills Carousel initialized');
+            console.log('Carousel initialized');
         } else {
-            console.warn('❌ Hard Skills track not found or empty');
+            console.warn('Hard Skills track not found or empty');
         }
 
         if (softSkillsTrack && softSkillsTrack.children.length > 0) {
             softSkillsCarousel = new SkillsCarousel('softSkills');
-            console.log('✅ Soft Skills Carousel initialized');
+            console.log('Carousel initialized');
         } else {
-            console.warn('❌ Soft Skills track not found or empty');
+            console.warn('Soft Skills track not found or empty');
         }
     } catch (error) {
         console.error('Error initializing carousels:', error);
