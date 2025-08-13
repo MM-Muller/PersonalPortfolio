@@ -39,6 +39,7 @@
     flex-wrap: wrap;
     padding: 4rem 2rem;
     justify-content: center;
+    margin-top: 10%;
 }
 
 .skills-section {
@@ -455,6 +456,24 @@
     .skills-section {
         min-width: auto;
         width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Stack carousels on common desktop widths to avoid clipping */
+@media (max-width: 1920px) and (min-width: 1025px) {
+    .skills-container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 6rem;
+        max-width: 1200px;
+    }
+
+    .skills-section {
+        width: 100%;
+        min-width: auto;
         margin-bottom: 2rem;
     }
 }
