@@ -163,6 +163,38 @@
     background: gray;
 }
 
+.project-ml {
+    background-color: #ffffff;
+    background-image: url('/img/machineLearning.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.project-llms {
+    background-color: #ffffff;
+    background-image: url('/img/LLMs.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 110%;
+}
+
+.project-fixtime {
+    background-color: #ffffff;
+    background-image: url('/img/fixtime-truck.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+}
+
+.project-aquario {
+    background-color: #ffffff;
+    background-image: url('/img/aquario.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 105%;
+}
+
 @media (max-width: 1200px) {
     .projects-container {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
