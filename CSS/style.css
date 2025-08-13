@@ -678,3 +678,23 @@ span {
         font-size: 2rem;
     }
 }
+
+@media (max-width: 995px) {
+
+    .custom-shape-divider-top-1754576131 svg,
+    .custom-shape-divider-top-1754576132 svg {
+        height: 60px;
+        width: 100%;
+    }
+
+    .custom-shape-divider-top-1754576131,
+    .custom-shape-divider-top-1754576132 {
+        height: 60px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        overflow: visible;
+        line-height: 0;
+    }
+}
