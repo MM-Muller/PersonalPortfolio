@@ -148,6 +148,7 @@
     .projects-container {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 2rem;
+        margin-top: 12%;
     }
 
     .projects {
@@ -169,6 +170,7 @@
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 1.5rem;
         max-width: 600px;
+        margin-top: 16%;
     }
 
     .projects {
@@ -195,10 +197,11 @@
         grid-template-columns: 1fr;
         gap: 1rem;
         max-width: 300px;
+        margin-top: 22%;
     }
 
     .projects {
-        padding: 2rem 1% 1rem 1%;
+        padding: 3rem 1% 1rem 1%;
     }
 
     .projects h2 {

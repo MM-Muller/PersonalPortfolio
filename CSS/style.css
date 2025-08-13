@@ -605,8 +605,8 @@ span {
 .custom-shape-divider-top-1754576131 svg {
     position: relative;
     display: block;
-    width: calc(110% + 1.3px);
-    height: 120px;
+    width: 100%;
+    height: 90px;
 }
 
 .custom-shape-divider-top-1754576131 .shape-fill {
@@ -626,8 +626,8 @@ span {
 .custom-shape-divider-top-1754576132 svg {
     position: relative;
     display: block;
-    width: calc(110% + 1.3px);
-    height: 120px;
+    width: 100%;
+    height: 90px;
 }
 
 .custom-shape-divider-top-1754576132 .shape-fill {
@@ -683,18 +683,18 @@ span {
 
     .custom-shape-divider-top-1754576131 svg,
     .custom-shape-divider-top-1754576132 svg {
-        height: 60px;
+        height: 50px;
         width: 100%;
     }
 
     .custom-shape-divider-top-1754576131,
     .custom-shape-divider-top-1754576132 {
-        height: 60px;
+        height: 50px;
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
-        overflow: visible;
+        overflow: hidden;
         line-height: 0;
     }
 }
