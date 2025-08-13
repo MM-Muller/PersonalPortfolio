@@ -12,6 +12,25 @@
     color: #4b453d;
 }
 
+@media (max-width: 1200px) {
+    .projects h2 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .projects h2 {
+        font-size: 3.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects h2 {
+        font-size: 2.4rem;
+        margin-left: 0;
+    }
+}
+
 .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

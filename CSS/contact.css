@@ -6,6 +6,25 @@
     color: #EAE4D5;
 }
 
+@media (max-width: 1200px) {
+    .contact>h2 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .contact>h2 {
+        font-size: 3.2rem;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact>h2 {
+        font-size: 2.4rem;
+    }
+}
+
 .contact {
     position: relative;
 }

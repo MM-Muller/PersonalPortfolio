@@ -15,8 +15,27 @@
     font-size: 5rem;
     margin-bottom: 4rem;
     text-align: left;
-    margin-left: -4%;
+    margin-left: 0;
     color: #4b453d;
+}
+
+@media (max-width: 1200px) {
+    .about h2 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .about h2 {
+        font-size: 3.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .about h2 {
+        font-size: 2.4rem;
+        margin-left: 0;
+    }
 }
 
 .timeline-items {

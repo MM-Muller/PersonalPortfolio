@@ -113,6 +113,30 @@ section {
     padding: 5rem 9% 5rem;
 }
 
+/* Consistent H2 alignment with header padding */
+.section-title {
+    padding-inline: 9%;
+    margin-top: calc(60px + 1rem);
+}
+
+@media (max-width: 1200px) {
+    .section-title {
+        padding-inline: 9%;
+    }
+}
+
+@media (max-width: 900px) {
+    .section-title {
+        padding-inline: 9%;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-title {
+        padding-inline: 9%;
+    }
+}
+
 .site-footer {
     background-color: #000;
     color: #EAE4D5;
