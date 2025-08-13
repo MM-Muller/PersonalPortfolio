@@ -1,3 +1,15 @@
+.contact>h2 {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+    text-align: left;
+    margin-left: -4%;
+    color: #EAE4D5;
+}
+
+.contact {
+    position: relative;
+}
+
 .form {
     --input-focus: #000000;
     --font-color: #948979;
