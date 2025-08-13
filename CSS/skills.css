@@ -70,7 +70,14 @@
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    margin: 0 3rem;
+    margin: 0;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 0 3rem;
+    overflow: visible;
 }
 
 .carousel-track {
@@ -173,7 +180,7 @@
     font-size: 1.4rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    z-index: 10;
+    z-index: 20;
     backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
@@ -187,11 +194,11 @@
 }
 
 .carousel-btn.prev {
-    left: -35px;
+    left: clamp(0px, calc(3rem - 20px), 3rem);
 }
 
 .carousel-btn.next {
-    right: -35px;
+    right: clamp(0px, calc(3rem - 20px), 3rem);
 }
 
 .carousel-indicators {
@@ -240,8 +247,11 @@
 
     .carousel-container {
         height: 240px;
-        margin: 0 4rem;
         overflow: hidden;
+    }
+
+    .carousel-wrapper {
+        padding: 0 4rem;
     }
 
     .skill-card {
@@ -256,11 +266,11 @@
     }
 
     .carousel-btn.prev {
-        left: -40px;
+        left: clamp(0px, calc(4rem - 20px), 4rem);
     }
 
     .carousel-btn.next {
-        right: -40px;
+        right: clamp(0px, calc(4rem - 20px), 4rem);
     }
 }
 
@@ -283,8 +293,11 @@
     .carousel-container {
         height: 200px;
         padding: 1rem;
-        margin: 0 5rem;
         overflow: hidden;
+    }
+
+    .carousel-wrapper {
+        padding: 0 5rem;
     }
 
     .skill-card {
@@ -306,11 +319,11 @@
     }
 
     .carousel-btn.prev {
-        left: -45px;
+        left: clamp(0px, calc(5rem - 17.5px), 5rem);
     }
 
     .carousel-btn.next {
-        right: -45px;
+        right: clamp(0px, calc(5rem - 17.5px), 5rem);
     }
 
     .skill-icon {
@@ -343,17 +356,16 @@
         margin-bottom: 2.5rem;
     }
 
-    .carousel-container {
-        margin: 0 6rem;
-        overflow: hidden;
+    .carousel-wrapper {
+        padding: 0 6rem;
     }
 
     .carousel-btn.prev {
-        left: -50px;
+        left: clamp(0px, calc(6rem - 17.5px), 6rem);
     }
 
     .carousel-btn.next {
-        right: -50px;
+        right: clamp(0px, calc(6rem - 17.5px), 6rem);
     }
 }
 
