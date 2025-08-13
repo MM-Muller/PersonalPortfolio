@@ -410,7 +410,6 @@
     }
 }
 
-/* Stack carousels on intermediate screens to avoid partial clipping */
 @media (max-width: 1600px) and (min-width: 1025px) {
     .skills-container {
         flex-direction: column;
