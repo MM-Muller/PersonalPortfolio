@@ -57,6 +57,15 @@
     color: #948979;
 }
 
+.skills>h2 {
+    font-size: 5rem;
+    margin-bottom: 6rem;
+    text-align: left;
+    margin-left: -95%;
+    color: #EAE4D5;
+    margin-top: -18.5%;
+}
+
 .carousel-container {
     position: relative;
     overflow: hidden;
