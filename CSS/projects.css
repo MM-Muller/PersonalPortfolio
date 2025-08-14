@@ -163,36 +163,45 @@
     background: gray;
 }
 
-.project-ml {
+.project-ml,
+.project-llms,
+.project-fixtime,
+.project-aquario {
     background-color: #ffffff;
-    background-image: url('/img/machineLearning.webp');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     background-size: 100%;
+    background-position: center;
+}
+
+.project-ml {
+    background-image: url('/img/machineLearning.webp');
 }
 
 .project-llms {
-    background-color: #ffffff;
     background-image: url('/img/LLMs.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 110%;
 }
 
 .project-fixtime {
-    background-color: #ffffff;
     background-image: url('/img/fixtime-truck.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 90%;
 }
 
 .project-aquario {
-    background-color: #ffffff;
     background-image: url('/img/aquario.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 105%;
+}
+
+@media (max-width: 600px) {
+
+    .project-ml,
+    .project-llms,
+    .project-fixtime,
+    .project-aquario {
+        min-height: 160px;
+        background-size: cover;
+        width: 100%;
+        border-radius: 10px;
+    }
 }
 
 @media (max-width: 1200px) {
