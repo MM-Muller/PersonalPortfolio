@@ -167,7 +167,7 @@ class SkillsCarousel {
 let hardSkillsCarousel, softSkillsCarousel;
 
 function initializeCarousels() {
-    console.log('Initializing carousels...');
+    console.log('Initializing carousels');
 
     try {
         const hardSkillsTrack = document.getElementById('hardSkillsTrack');
@@ -200,7 +200,7 @@ function moveCarousel(type, direction) {
         } else if (type === 'softSkills' && softSkillsCarousel) {
             softSkillsCarousel.move(direction);
         } else {
-            console.error(`❌ Carousel ${type} not found or not initialized`);
+            console.error(`Carousel ${type} not found or not initialized`);
         }
     } catch (error) {
         console.error('Error moving carousel:', error);
@@ -208,7 +208,7 @@ function moveCarousel(type, direction) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('🚀 DOM Content Loaded');
+    console.log('DOM Content Loaded');
 
     setTimeout(() => {
         initializeCarousels();

@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     nav.addEventListener('click', closeOnLinkClick);
 
-    // Close when clicking outside nav and toggle button
     document.addEventListener('click', (event) => {
         const clickedInsideNav = nav.contains(event.target);
         const clickedToggle = toggleButton.contains(event.target);
@@ -37,5 +36,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', handleResize);
 });
-
-
