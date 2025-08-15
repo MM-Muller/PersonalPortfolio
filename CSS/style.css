@@ -242,7 +242,7 @@ span {
 
 .home-img img {
     position: relative;
-    width: 32vw;
+    width: 20vw;
     border-radius: 50%;
     box-shadow: 0 0 30px #948979;
     cursor: pointer;
@@ -740,6 +740,73 @@ span {
 
 .custom-shape-divider-top-1754576132 .shape-fill {
     fill: #EAE4D5;
+}
+
+@media (max-width: 1024px) and (min-width: 1000px) {
+    .home {
+        gap: 5rem;
+        padding: 10px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .home .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home .home-content h3 {
+        font-size: 3rem;
+    }
+
+    .home-img {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-img img {
+        width: 40vw;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .about {
+        padding-top: 15rem;
+    }
+
+    .about h2 {
+        font-size: 4rem;
+    }
+
+    .about-text h3 {
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        padding-inline: 9%;
+        margin-top: calc(60px + 1rem);
+    }
+
+    .custom-shape-divider-top-1754576131 svg,
+    .custom-shape-divider-top-1754576132 svg {
+        height: 70px;
+        width: 100%;
+    }
+
+    .custom-shape-divider-top-1754576131,
+    .custom-shape-divider-top-1754576132 {
+        height: 70px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
 }
 
 
