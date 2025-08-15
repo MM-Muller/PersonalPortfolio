@@ -97,38 +97,36 @@ nav a:hover {
 .button-container {
     display: none;
     background-color: #000000;
-    width: 380px;
-    height: 40px;
+    width: 420px;
+    height: 45px;
     align-items: center;
     justify-content: space-around;
     border-radius: 10px;
     margin: 0 auto;
-    padding: 0 25px;
+    padding: 0 35px;
     border: 1px solid #948979;
 }
 
 .button {
     outline: 0 !important;
     border: 0 !important;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #948979;
-    transition: all ease-in-out 0.3s;
     cursor: pointer;
 }
 
 .button:hover {
-    transform: translateY(-3px) scale(1.1);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: #EAE4D5;
 }
 
 .button:active {
-    transform: translateY(0) scale(0.95);
+    color: #948979;
 }
 
 .icon {
@@ -137,29 +135,6 @@ nav a:hover {
 
 .button {
     position: relative;
-}
-
-.button::after {
-    content: attr(title);
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 1000;
-}
-
-.button:hover::after {
-    opacity: 1;
-    visibility: visible;
 }
 
 @media(max-width:995px) {
@@ -969,9 +944,9 @@ span {
 
 @media (max-width: 768px) {
     .button-container {
-        width: 310px;
-        height: 35px;
-        padding: 0 10px;
+        width: 350px;
+        height: 40px;
+        padding: 0 15px;
     }
 
     .logo {
@@ -979,8 +954,8 @@ span {
     }
 
     .button {
-        width: 35px;
-        height: 35px;
+        width: 38px;
+        height: 38px;
     }
 
     .icon {
@@ -990,14 +965,14 @@ span {
 
 @media (max-width: 480px) {
     .button-container {
-        width: 260px;
-        height: 32px;
-        padding: 0 8px;
+        width: 300px;
+        height: 38px;
+        padding: 0 12px;
     }
 
     .button {
-        width: 32px;
-        height: 32px;
+        width: 35px;
+        height: 35px;
     }
 
     .icon {
