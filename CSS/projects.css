@@ -176,11 +176,11 @@
 }
 
 .project-ml {
-    background-image: url('PersonalPortfolio/images/machineLearning.webp');
+    background-image: url('../images/machineLearning.png');
 }
 
 .project-llms {
-    background-image: url('PersonalPortfolio/images/LLMs.png');
+    background-image: url('../images/LLMs.png');
 }
 
 .project-fixtime {
