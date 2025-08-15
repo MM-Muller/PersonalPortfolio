@@ -176,19 +176,19 @@
 }
 
 .project-ml {
-    background-image: url('/img/machineLearning.webp');
+    background-image: url('/images/machineLearning.webp');
 }
 
 .project-llms {
-    background-image: url('/img/LLMs.png');
+    background-image: url('/images/LLMs.png');
 }
 
 .project-fixtime {
-    background-image: url('/img/fixtime-truck.png');
+    background-image: url('/images/fixtime-truck.png');
 }
 
 .project-aquario {
-    background-image: url('/img/aquario.png');
+    background-image: url('/images/aquario.png');
 }
 
 @media (max-width: 600px) {
