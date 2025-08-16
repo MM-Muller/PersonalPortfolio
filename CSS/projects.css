@@ -17,15 +17,35 @@
     pointer-events: none;
 }
 
-.projects h2 {
-    font-size: 5.5rem;
+.projects .section-title {
+    font-size: 4rem;
     font-weight: 800;
-    margin-bottom: 1.5rem;
     text-align: center;
-    color: #948979;
-    letter-spacing: -2px;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+    background: linear-gradient(135deg, #948979 0%, #4b453d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     position: relative;
     z-index: 2;
+    color: #948979;
+    letter-spacing: -2px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projects .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #948979, transparent);
+    border-radius: 2px;
 }
 
 .projects-subtitle {
@@ -214,11 +234,15 @@
     .project-card {
         height: 520px;
     }
+
+    .projects .section-title {
+        font-size: 3.5rem;
+    }
 }
 
 @media (max-width: 1200px) {
-    .projects h2 {
-        font-size: 4.5rem;
+    .projects .section-title {
+        font-size: 3.5rem;
     }
 
     .projects-container {
@@ -241,8 +265,8 @@
 }
 
 @media (max-width: 900px) {
-    .projects h2 {
-        font-size: 3.5rem;
+    .projects .section-title {
+        font-size: 3rem;
         letter-spacing: -1px;
     }
 
@@ -301,8 +325,8 @@
 }
 
 @media (max-width: 600px) {
-    .projects h2 {
-        font-size: 2.8rem;
+    .projects .section-title {
+        font-size: 2.5rem;
     }
 
     .projects-subtitle {
