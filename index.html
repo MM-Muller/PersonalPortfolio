@@ -453,7 +453,7 @@
             </div>
         </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="custom-shape-divider-top-1754576132">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                     preserveAspectRatio="none">
@@ -461,18 +461,31 @@
                 </svg>
             </div>
 
-            <h2 class="section-title" id="contact">Contato</h2>
+            <h2 class="section-title">Envie uma mensagem!</h2>
+            <p class="contact-subtitle">Tem uma pergunta, proposta ou só quer dizer oi? Fique à vontade.</p>
+
             <div class="contact-content">
                 <form class="form" action="https://usebasin.com/f/f672f7cc2b7e" method="POST">
-                    <div class="title">Fale comigo!<br><span>Preencha o formulário ou envie um e-mail com sua
-                            dúvida</span></div>
-                    <input class="input" name="email" placeholder="email" type="email" required>
-                    <input class="input" name="name" placeholder="nome" type="text" required>
-                    <textarea class="input" name="message" placeholder="mensagem" required></textarea>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Seu Nome</label>
+                            <input class="input" name="name" placeholder="Digite seu nome" type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Endereço de Email</label>
+                            <input class="input" name="email" placeholder="Digite seu endereço de email" type="email"
+                                required>
+                        </div>
+                    </div>
 
-                    <button class="button-confirm" type="submit">Enviar →</button>
-                </form>
-            </div>
+                    <div class="form-group form-group-full">
+                        <label class="form-label">Sua Mensagem</label>
+                        <textarea class="input" name="message"
+                            placeholder="Olá, acredito que precisamos de um sistema para nossos produtos na Empresa X. Quando podemos conversar sobre isso?"
+                            required></textarea>
+                    </div>
+
+                    <button class="button-confirm" type="submit">ENVIAR</button>
         </section>
     </main>
     <footer class="site-footer">
@@ -491,7 +504,6 @@
     </footer>
 
     <script src="JS/carousel.js"></script>
-    <script src="JS/menuHamburguer.js"></script>
     <script src="JS/buttonSubmit.js"></script>
     <script src="JS/navigation.js"></script>
 </body>
