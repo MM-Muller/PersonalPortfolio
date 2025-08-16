@@ -155,139 +155,47 @@
                 </svg>
             </div>
 
+            <div class="floating-elements"></div>
+
+            <h2>Competências</h2>
+
             <div class="skills-container">
                 <div class="skills-section">
-                    <h2>Hard Skills</h2>
-                    <div class="carousel-wrapper">
-                        <div class="carousel-container">
+                    <h2><span>Hard Skills</span></h2>
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
                             <div class="carousel-track" id="hardSkillsTrack">
-                                <div class=" skill-card">
-                                    <div class="skill-icon"><i class="fab fa-python"></i></div>
-                                    <div class="skill-name">Python</div>
-                                    <div class="skill-description">IA, Machine Learning, LLMs e automação</div>
-                                </div>
-                                <div class="skill-card">
-                                    <div class="skill-icon"><i class="fab fa-html5"></i></div>
-                                    <div class="skill-name">HTML5</div>
-                                    <div class="skill-description">Estruturação semântica e acessível</div>
-                                </div>
-                                <div class="skill-card">
-                                    <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
-                                    <div class="skill-name">CSS3</div>
-                                    <div class="skill-description">Estilização avançada e responsiva</div>
-                                </div>
-                                <div class="skill-card">
-                                    <div class="skill-icon"><i class="fab fa-js"></i></div>
-                                    <div class="skill-name">JavaScript</div>
-                                    <div class="skill-description">Programação dinâmica e interativa</div>
-                                </div>
-                                <div class="skill-card">
-                                    <div class="skill-icon"><i class="fab fa-react"></i></div>
-                                    <div class="skill-name">React</div>
-                                    <div class="skill-description">Desenvolvimento de interfaces modernas</div>
-                                </div>
-                                <div class="skill-card">
-                                    <div class="skill-icon"><i class="fab fa-node-js"></i></div>
-                                    <div class="skill-name">Node.js</div>
-                                    <div class="skill-description">Desenvolvimento backend escalável</div>
-                                </div>
-                                <div class="skill-card">
-                                    <div class="skill-icon"><i class="fab fa-angular"></i></div>
-                                    <div class="skill-name">Angular</div>
-                                    <div class="skill-description">Desenvolvimento de aplicações web robustas</div>
-                                </div>
-                                <div class="skill-card">
-                                    <div class="skill-icon"><i class="fab fa-php"></i></div>
-                                    <div class="skill-name">PHP</div>
-                                    <div class="skill-description">Desenvolvimento web dinâmico</div>
-                                </div>
-                                <div class="skill-card">
-                                    <div class="skill-icon"><i class="fab fa-java"></i></div>
-                                    <div class="skill-name">Java</div>
-                                    <div class="skill-description">Programação orientada a objetos</div>
-                                </div>
-                                <div class="skill-card">
-                                    <div class="skill-icon"><i class="fab fa-docker"></i></div>
-                                    <div class="skill-name">Docker</div>
-                                    <div class="skill-description">Containerização e deploy eficiente</div>
-                                </div>
-                                <div class="skill-card">
-                                    <div class="skill-icon"><i class="fas fa-database"></i></div>
-                                    <div class="skill-name">MongoDB</div>
-                                    <div class="skill-description">Banco de dados NoSQL orientado a documentos</div>
-                                </div>
-                                <div class="skill-card">
-                                    <div class="skill-icon"><i class="fas fa-database"></i></div>
-                                    <div class="skill-name">MySQL</div>
-                                    <div class="skill-description">Banco de dados relacional robusto</div>
-                                </div>
+
+                            </div>
+                            <div class="carousel-controls">
+                                <button class="carousel-btn" onclick="moveCarousel('hardSkills', -1)">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="carousel-btn" onclick="moveCarousel('hardSkills', 1)">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
                             </div>
                         </div>
-                        <button class="carousel-btn prev" onclick="moveCarousel('hardSkills', -1)">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="carousel-btn next" onclick="moveCarousel('hardSkills', 1)">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
                     </div>
-                    <div class="carousel-indicators" id="hardSkillsIndicators"></div>
                 </div>
 
                 <div class="skills-section">
-                    <h2>Soft Skills</h2>
-                    <div class="carousel-wrapper">
-                        <div class="carousel-container">
+                    <h2><span>Soft Skills</span></h2>
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
                             <div class="carousel-track" id="softSkillsTrack">
-                                <div class=" skill-card">
-                                    <div class="skill-icon"><i class="fas fa-users"></i></div>
-                                    <div class="skill-name">Trabalho em Equipe</div>
-                                    <div class="skill-description">Colaboração eficaz e sinergia</div>
-                                </div>
-                                <div class="skill-card">
-                                    <div class="skill-icon"><i class="fas fa-lightbulb"></i></div>
-                                    <div class="skill-name">Pensamento Crítico</div>
-                                    <div class="skill-description">Análise e resolução de problemas</div>
-                                </div>
-                                <div class="skill-card">
-                                    <div class="skill-icon"><i class="fas fa-comments"></i></div>
-                                    <div class="skill-name">Comunicação</div>
-                                    <div class="skill-description">Expressão clara e objetiva</div>
-                                </div>
-                                <div class="skill-card">
-                                    <div class="skill-icon"><i class="fas fa-rocket"></i></div>
-                                    <div class="skill-name">Proatividade</div>
-                                    <div class="skill-description">Iniciativa e antecipação</div>
-                                </div>
-                                <div class="skill-card">
-                                    <div class="skill-icon"><i class="fas fa-sync-alt"></i></div>
-                                    <div class="skill-name">Adaptabilidade</div>
-                                    <div class="skill-description">Flexibilidade e evolução</div>
-                                </div>
-                                <div class="skill-card">
-                                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
-                                    <div class="skill-name">Curiosidade</div>
-                                    <div class="skill-description">Busca constante por conhecimento</div>
-                                </div>
-                                <div class="skill-card">
-                                    <div class="skill-icon"><i class="fas fa-handshake"></i></div>
-                                    <div class="skill-name">Liderança</div>
-                                    <div class="skill-description">Inspiração e orientação</div>
-                                </div>
-                                <div class="skill-card">
-                                    <div class="skill-icon"><i class="fas fa-clock"></i></div>
-                                    <div class="skill-name">Gestão de Tempo</div>
-                                    <div class="skill-description">Organização e produtividade</div>
-                                </div>
+
+                            </div>
+                            <div class="carousel-controls">
+                                <button class="carousel-btn" onclick="moveCarousel('softSkills', -1)">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="carousel-btn" onclick="moveCarousel('softSkills', 1)">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
                             </div>
                         </div>
-                        <button class="carousel-btn prev" onclick="moveCarousel('softSkills', -1)">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="carousel-btn next" onclick="moveCarousel('softSkills', 1)">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
                     </div>
-                    <div class="carousel-indicators" id="softSkillsIndicators"></div>
                 </div>
             </div>
         </section>

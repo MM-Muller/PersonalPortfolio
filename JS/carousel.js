@@ -1,218 +1,148 @@
-class SkillsCarousel {
-    constructor(type) {
-        this.type = type;
-        this.track = document.getElementById(type + 'Track');
-        this.container = this.track.parentElement;
-        this.cards = Array.from(this.track.children);
-        this.currentIndex = 0;
-        this.cardsToShow = this.getCardsToShow();
-        this.cardWidth = 140;
-        this.gap = 20;
+const skillsData = {
+    hardSkills: [
+        { id: 'python', name: 'Python', description: 'IA, Machine Learning, LLMs e automação' },
+        { id: 'html5', name: 'HTML5', description: 'Estruturação semântica e acessível' },
+        { id: 'css3', name: 'CSS3', description: 'Estilização avançada e responsiva' },
+        { id: 'javascript', name: 'JavaScript', description: 'Programação dinâmica e interativa' },
+        { id: 'react', name: 'React', description: 'Desenvolvimento de interfaces modernas' },
+        { id: 'nodejs', name: 'Node.js', description: 'Desenvolvimento backend escalável' },
+        { id: 'angular', name: 'Angular', description: 'Desenvolvimento de aplicações web robustas' },
+        { id: 'php', name: 'PHP', description: 'Desenvolvimento web dinâmico' },
+        { id: 'java', name: 'Java', description: 'Programação orientada a objetos' },
+        { id: 'docker', name: 'Docker', description: 'Containerização e deploy eficiente' },
+        { id: 'mongodb', name: 'MongoDB', description: 'Banco de dados NoSQL orientado a documentos' },
+        { id: 'mysql', name: 'MySQL', description: 'Banco de dados relacional robusto' }
+    ],
+    softSkills: [
+        { id: 'teamwork', name: 'Trabalho em Equipe', description: 'Colaboração eficaz e sinergia' },
+        { id: 'critical-thinking', name: 'Pensamento Crítico', description: 'Análise e resolução de problemas' },
+        { id: 'communication', name: 'Comunicação', description: 'Expressão clara e objetiva' },
+        { id: 'proactivity', name: 'Proatividade', description: 'Iniciativa e antecipação' },
+        { id: 'adaptability', name: 'Adaptabilidade', description: 'Flexibilidade e evolução' },
+        { id: 'curiosity', name: 'Curiosidade', description: 'Busca constante por conhecimento' },
+        { id: 'leadership', name: 'Liderança', description: 'Inspiração e orientação' },
+        { id: 'time-management', name: 'Gestão de Tempo', description: 'Organização e produtividade' }
+    ]
+};
 
-        this.maxIndex = Math.max(0, this.cards.length - this.cardsToShow);
+const carouselStates = {
+    hardSkills: { currentIndex: 0 },
+    softSkills: { currentIndex: 0 }
+};
 
-        console.log(`${type} Carousel:`, {
-            totalCards: this.cards.length,
-            cardsToShow: this.cardsToShow,
-            maxIndex: this.maxIndex,
-            cardWidth: this.cardWidth,
-            gap: this.gap
-        });
-
-        this.init();
-    }
-
-    init() {
-        this.createIndicators();
-        this.updateCarousel();
-        this.startAutoPlay();
-        this.bindEvents();
-    }
-
-    getCardsToShow() {
-        const containerWidth = this.container.offsetWidth - 40;
-        if (window.innerWidth <= 768) {
-            return Math.min(2, this.cards.length);
-        } else if (window.innerWidth <= 1024) {
-            return Math.min(3, this.cards.length);
-        } else {
-            return Math.min(4, this.cards.length);
-        }
-    }
-
-    createIndicators() {
-        const indicatorsContainer = document.getElementById(this.type + 'Indicators');
-        if (!indicatorsContainer) return;
-
-        indicatorsContainer.innerHTML = '';
-
-        if (this.cards.length <= this.cardsToShow) return;
-
-        const totalPages = this.maxIndex + 1;
-        for (let i = 0; i < totalPages; i++) {
-            const indicator = document.createElement('div');
-            indicator.className = 'indicator' + (i === this.currentIndex ? ' active' : '');
-            indicator.addEventListener('click', () => {
-                this.goToSlide(i);
-            });
-            indicatorsContainer.appendChild(indicator);
-        }
-    }
-
-    updateCarousel() {
-        if (!this.track || this.cards.length === 0) return;
-
-        this.updateResponsiveValues();
-
-        const offset = -this.currentIndex * (this.cardWidth + this.gap);
-
-        console.log(`${this.type} - Moving to index ${this.currentIndex}, offset: ${offset}px`);
-
-        this.track.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
-        this.track.style.transform = `translateX(${offset}px)`;
-        this.updateIndicators();
-    }
-
-    updateResponsiveValues() {
-        if (window.innerWidth <= 768) {
-            this.cardWidth = 110;
-            this.gap = 12;
-        } else if (window.innerWidth <= 1024) {
-            this.cardWidth = 120;
-            this.gap = 15;
-        } else {
-            this.cardWidth = 140;
-            this.gap = 20;
-        }
-    }
-
-    updateIndicators() {
-        const indicators = document.querySelectorAll(`#${this.type}Indicators .indicator`);
-        indicators.forEach((indicator, index) => {
-            indicator.classList.toggle('active', index === this.currentIndex);
-        });
-    }
-
-    move(direction) {
-        if (this.cards.length <= this.cardsToShow) return;
-        const previousIndex = this.currentIndex;
-        this.currentIndex += direction;
-
-        if (this.currentIndex > this.maxIndex) {
-            this.currentIndex = 0;
-        } else if (this.currentIndex < 0) {
-            this.currentIndex = this.maxIndex;
-        }
-
-        console.log(`${this.type} - Direction: ${direction}, Previous: ${previousIndex}, New: ${this.currentIndex}, Max: ${this.maxIndex}`);
-
-        this.updateCarousel();
-        this.resetAutoPlay();
-    }
-
-    goToSlide(index) {
-        if (index >= 0 && index <= this.maxIndex) {
-            this.currentIndex = index;
-            this.updateCarousel();
-            this.resetAutoPlay();
-        }
-    }
-
-    startAutoPlay() {
-        if (this.cards.length <= this.cardsToShow) return;
-
-        this.autoPlayInterval = setInterval(() => {
-            this.move(1);
-        }, 4000);
-    }
-
-    resetAutoPlay() {
-        if (this.autoPlayInterval) {
-            clearInterval(this.autoPlayInterval);
-        }
-        this.startAutoPlay();
-    }
-
-    stopAutoPlay() {
-        if (this.autoPlayInterval) {
-            clearInterval(this.autoPlayInterval);
-            this.autoPlayInterval = null;
-        }
-    }
-
-    bindEvents() {
-        window.addEventListener('resize', () => {
-            const newCardsToShow = this.getCardsToShow();
-            if (newCardsToShow !== this.cardsToShow) {
-                this.cardsToShow = newCardsToShow;
-                this.maxIndex = Math.max(0, this.cards.length - this.cardsToShow);
-                this.currentIndex = Math.min(this.currentIndex, this.maxIndex);
-                this.createIndicators();
-            }
-            this.updateCarousel();
-        });
-
-        if (this.container) {
-            this.container.addEventListener('mouseenter', () => {
-                this.stopAutoPlay();
-            });
-
-            this.container.addEventListener('mouseleave', () => {
-                this.startAutoPlay();
-            });
-        }
-    }
+function createSkillCard(skill) {
+    return `
+        <div class="skill-card" data-skill="${skill.id}">
+            <div class="skill-icon"></div>
+            <div class="skill-name">${skill.name}</div>
+            <div class="skill-description">${skill.description}</div>
+        </div>
+    `;
 }
 
-let hardSkillsCarousel, softSkillsCarousel;
+function initializeCarousel(type) {
+    const track = document.getElementById(`${type}Track`);
+    const skills = skillsData[type];
 
-function initializeCarousels() {
-    console.log('Initializing carousels');
+    track.innerHTML = skills.map(skill => createSkillCard(skill)).join('');
 
-    try {
-        const hardSkillsTrack = document.getElementById('hardSkillsTrack');
-        const softSkillsTrack = document.getElementById('softSkillsTrack');
+    updateCarousel(type);
+}
 
-        if (hardSkillsTrack && hardSkillsTrack.children.length > 0) {
-            hardSkillsCarousel = new SkillsCarousel('hardSkills');
-            console.log('Carousel initialized');
+function updateCarousel(type) {
+    const track = document.getElementById(`${type}Track`);
+    const cards = track.querySelectorAll('.skill-card');
+    const currentIndex = carouselStates[type].currentIndex;
+    const totalCards = cards.length;
+
+    cards.forEach((card, index) => {
+        card.className = 'skill-card';
+        card.setAttribute('data-skill', skillsData[type][index].id);
+
+        const position = (index - currentIndex + totalCards) % totalCards;
+
+        if (position === 0) {
+            card.classList.add('center');
+        } else if (position === 1 || position === totalCards - 1) {
+            card.classList.add(position === 1 ? 'right' : 'left');
+        } else if (position === 2 || position === totalCards - 2) {
+            card.classList.add(position === 2 ? 'far-right' : 'far-left');
         } else {
-            console.warn('Hard Skills track not found or empty');
+            card.classList.add('hidden');
         }
-
-        if (softSkillsTrack && softSkillsTrack.children.length > 0) {
-            softSkillsCarousel = new SkillsCarousel('softSkills');
-            console.log('Carousel initialized');
-        } else {
-            console.warn('Soft Skills track not found or empty');
-        }
-    } catch (error) {
-        console.error('Error initializing carousels:', error);
-    }
+    });
 }
 
 function moveCarousel(type, direction) {
-    console.log(`🔄 moveCarousel called: ${type}, direction: ${direction}`);
-
-    try {
-        if (type === 'hardSkills' && hardSkillsCarousel) {
-            hardSkillsCarousel.move(direction);
-        } else if (type === 'softSkills' && softSkillsCarousel) {
-            softSkillsCarousel.move(direction);
-        } else {
-            console.error(`Carousel ${type} not found or not initialized`);
-        }
-    } catch (error) {
-        console.error('Error moving carousel:', error);
-    }
+    const totalCards = skillsData[type].length;
+    carouselStates[type].currentIndex =
+        (carouselStates[type].currentIndex + direction + totalCards) % totalCards;
+    updateCarousel(type);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    console.log('DOM Content Loaded');
+function goToSlide(type, index) {
+    carouselStates[type].currentIndex = index;
+    updateCarousel(type);
+}
 
-    setTimeout(() => {
-        initializeCarousels();
-    }, 100);
+function startAutoRotation() {
+    setInterval(() => {
+        moveCarousel('hardSkills', 1);
+    }, 4000);
+
+    setInterval(() => {
+        moveCarousel('softSkills', 1);
+    }, 4500);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initializeCarousel('hardSkills');
+    initializeCarousel('softSkills');
+    startAutoRotation();
 });
 
-window.moveCarousel = moveCarousel;
+let startX = 0;
+let currentCarousel = null;
+
+document.addEventListener('touchstart', (e) => {
+    const carousel = e.target.closest('.carousel-container');
+    if (carousel) {
+        startX = e.touches[0].clientX;
+        currentCarousel = carousel.querySelector('.carousel-track').id.replace('Track', '');
+    }
+});
+
+document.addEventListener('touchend', (e) => {
+    if (!currentCarousel) return;
+
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+
+    if (Math.abs(diff) > 50) {
+        moveCarousel(currentCarousel, diff > 0 ? 1 : -1);
+    }
+
+    currentCarousel = null;
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+        moveCarousel('hardSkills', -1);
+        moveCarousel('softSkills', -1);
+    } else if (e.key === 'ArrowRight') {
+        moveCarousel('hardSkills', 1);
+        moveCarousel('softSkills', 1);
+    }
+});
+
+document.querySelectorAll('.carousel-container').forEach(container => {
+    let autoRotationPaused = false;
+
+    container.addEventListener('mouseenter', () => {
+        autoRotationPaused = true;
+    });
+
+    container.addEventListener('mouseleave', () => {
+        autoRotationPaused = false;
+    });
+});
