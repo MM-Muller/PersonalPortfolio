@@ -993,7 +993,7 @@ span {
 @media (max-width: 480px) {
     .button-container {
         width: 300px;
-        height: 38px;
+        height: 50px;
         padding: 0 12px;
     }
 
@@ -1003,7 +1003,7 @@ span {
     }
 
     .icon {
-        font-size: 14px;
+        font-size: 20px;
     }
 
     .typing-text {
