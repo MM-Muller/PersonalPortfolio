@@ -1,17 +1,17 @@
 const skillsData = {
     hardSkills: [
-        { id: 'python', name: 'Python', description: 'IA, Machine Learning, LLMs e automação' },
-        { id: 'html5', name: 'HTML5', description: 'Estruturação semântica e acessível' },
-        { id: 'css3', name: 'CSS3', description: 'Estilização avançada e responsiva' },
-        { id: 'javascript', name: 'JavaScript', description: 'Programação dinâmica e interativa' },
-        { id: 'react', name: 'React', description: 'Desenvolvimento de interfaces modernas' },
-        { id: 'nodejs', name: 'Node.js', description: 'Desenvolvimento backend escalável' },
-        { id: 'angular', name: 'Angular', description: 'Desenvolvimento de aplicações web robustas' },
-        { id: 'php', name: 'PHP', description: 'Desenvolvimento web dinâmico' },
-        { id: 'java', name: 'Java', description: 'Programação orientada a objetos' },
-        { id: 'docker', name: 'Docker', description: 'Containerização e deploy eficiente' },
-        { id: 'mongodb', name: 'MongoDB', description: 'Banco de dados NoSQL orientado a documentos' },
-        { id: 'mysql', name: 'MySQL', description: 'Banco de dados relacional robusto' }
+        { id: 'python', name: 'Python', description: 'IA, Machine Learning, LLMs e automação<br>(Ensino Superior)' },
+        { id: 'html5', name: 'HTML5', description: 'Estruturação semântica e acessível<br>(Ensino Superior)' },
+        { id: 'css3', name: 'CSS3', description: 'Estilização avançada e responsiva<br>(Ensino Superior)' },
+        { id: 'javascript', name: 'JavaScript', description: 'Programação dinâmica e interativa<br>(Ensino Superior)' },
+        { id: 'react', name: 'React', description: 'Desenvolvimento de interfaces modernas<br>(Ensino Superior)' },
+        { id: 'nodejs', name: 'Node.js', description: 'Desenvolvimento backend escalável<br>(Curso Online)' },
+        { id: 'angular', name: 'Angular', description: 'Desenvolvimento de aplicações web robustas<br>(Curso Online)' },
+        { id: 'php', name: 'PHP', description: 'Desenvolvimento web dinâmico<br>(Ensino Superior)' },
+        { id: 'java', name: 'Java', description: 'Programação orientada a objetos<br>(Ensino Superior)' },
+        { id: 'docker', name: 'Docker', description: 'Containerização e deploy eficiente<br>(Curso Online)' },
+        { id: 'mongodb', name: 'MongoDB', description: 'Banco de dados NoSQL orientado a documentos<br>(Curso Online)' },
+        { id: 'mysql', name: 'MySQL', description: 'Banco de dados relacional robusto<br>(Ensino Superior)' }
     ],
     softSkills: [
         { id: 'teamwork', name: 'Trabalho em Equipe', description: 'Colaboração eficaz e sinergia' },
