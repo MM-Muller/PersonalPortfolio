@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 })
                 .finally(() => {
                     submitButton.disabled = false;
-                    submitButton.textContent = 'Enviar →';
+                    submitButton.textContent = 'Enviar';
                 });
         });
     }
